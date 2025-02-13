@@ -1,0 +1,10 @@
+/* Ajustando o fundo da página */
+body {
+    background-color: #f4f4f9; /* Cor de fundo suave */
+}
+
+/* Estilo do formulário */
+#formulario {
+    width: 100%;
+    max-width: 400px;
+}
