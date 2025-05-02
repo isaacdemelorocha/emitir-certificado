@@ -5,6 +5,17 @@ document.getElementById('certificadoForm').addEventListener('submit', function(e
     // Coleta o nome do usuário
     var nome = document.getElementById('nome').value;
 
+    // Envio para Google Forms
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdkeaDfu7iXLrG6GOHQ5NCC69F2KK4D4Q6Q_SMLTvfDIff8dA/formResponse";
+  const formData = new FormData();
+  formData.append("entry.1556172680", nome);
+
+  fetch(formUrl, {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  });
+
     // Cria um novo documento PDF usando jsPDF
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF('landscape'); // Criando PDF em modo paisagem
